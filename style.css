@@ -1,7 +1,5 @@
-*,
-*::before,
-*::after {
-    /* Modelo de Caixa (Box-Sizing) */
+
+*{    /* Modelo de Caixa (Box-Sizing) */
     box-sizing: border-box;
 
     /* Limpeza de Espaçamentos Padrão */
@@ -17,12 +15,24 @@ body {
 header {
     background-color: white;
     display: flex;
+    margin-top: 20px;
     justify-content: end;
-    padding-top: 10px;
     padding-right: 50px;
+}
+.logo {
+    padding-right: 430px;
+}
+.logo img {
+    width: 300px;
+    height: auto;
+}
+
+.nav nav-bar {
+    display: flex;
 }
 
 ul {
     display: flex;
+    margin-top: 30px;
     gap: 80px;
 }

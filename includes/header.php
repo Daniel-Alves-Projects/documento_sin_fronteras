@@ -23,7 +23,12 @@
     <title>Inicio</title>
 </head>
 
+
 <header>
+    <div class="logo">
+    <a href="#home"><img src="elements/logo.svg" alt=""></a>
+    </div>
+
     <nav class="navbar">
         <ul class="nav-link">
             <li class="nav-item">
