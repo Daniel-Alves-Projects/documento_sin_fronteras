@@ -72,3 +72,9 @@ body {
     background-color: #218838; /* Um tom mais escuro de verde ao passar o mouse */
     color: #FFFFFF;
 }
+
+#meuCarrossel {
+    width: 1200px;
+    margin: 0 auto; /* Centraliza o carrossel na página */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
