@@ -3,7 +3,8 @@
     box-sizing: border-box;
 
     /* Limpeza de Espaçamentos Padrão */
-    margin: 0;
+    margin-left: 50px;
+    margin-right: 50px;
     padding: 0;
 }
 body {
@@ -12,27 +13,62 @@ body {
     /* Fonte Padrão */
     font-family: Arial, sans-serif; 
 }
-header {
-    background-color: white;
+.header-content {
     display: flex;
-    margin-top: 20px;
-    justify-content: end;
-    padding-right: 50px;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    
+    background-color: #FFFFFF; /* Fundo branco puro para o cabeçalho */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave para destacar o cabeçalho */
 }
+
 .logo {
-    padding-right: 430px;
+    margin: 0;
 }
 .logo img {
     width: 300px;
     height: auto;
 }
 
-.nav nav-bar {
+.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
     display: flex;
+    /* justify-content: flex-end; -- Remova, pois o justify-content no .header-content já faz o trabalho */
 }
 
-ul {
-    display: flex;
-    margin-top: 30px;
-    gap: 80px;
+.nav-item {
+    margin: 0 18px; /* Espaçamento entre os links */
+}
+
+.nav-item a {
+    text-decoration: none;
+    color: #343A40; /* Cinza Suave para o texto normal */
+    font-size: 17px;
+    font-weight: 500; /* Levemente mais negrito */
+    padding: 8px 0; /* Espaçamento vertical para a área clicável */
+    display: block;
+    transition: color 0.3s ease; /* Transição suave para o efeito hover */
+}
+
+/* 6. Efeito Hover dos Links (ao passar o mouse) */
+.nav-item a:hover {
+    color: #007BFF; /* Azul Oceano ao passar o mouse */
+    /* text-decoration: underline; */ /* Opcional: Sublinhar ao passar o mouse */
+}
+
+/* Adicionando um botão de destaque na navbar (ex: para "Contato") */
+.nav-item.destaque a { /* Aplique esta classe a um <li> específico, por exemplo */
+    background-color: #28A745; /* Verde Água para o fundo do botão */
+    color: #FFFFFF; /* Texto branco */
+    padding: 8px 15px;
+    border-radius: 5px; /* Bordas arredondadas */
+    transition: background-color 0.3s ease;
+}
+
+.nav-item.destaque a:hover {
+    background-color: #218838; /* Um tom mais escuro de verde ao passar o mouse */
+    color: #FFFFFF;
 }

@@ -24,30 +24,21 @@
 </head>
 
 
-<header>
-    <div class="logo">
-    <a href="#home"><img src="elements/logo.svg" alt=""></a>
+<div class="header-content"> 
+    <div class="logo"> 
+        <a href="#home"> 
+            <img src="elements/logo.svg" alt="Documento Sin Fronteras - Página Inicial">
+        </a>
     </div>
-
-    <nav class="navbar">
-        <ul class="nav-link">
-            <li class="nav-item">
-                <a href="#home">Inicio</a>
-            </li>
-            <li class="nav-item">
-                <a href="#servicos">Serviços</a>
-            </li>
-            <li class="nav-item">
-                <a href="#sobre">Sobre</a>
-            </li>
-            <li class="nav-item">
-                <a href="#contato">Contato</a>
-            </li>
-            <li class="nav-item">
-                <a href="#blog">Blog</a>
-            </li>
+    <nav class="navbar"> 
+        <ul class="nav-links">
+            <li class="nav-item"><a href="#inicio">Inicio</a></li>
+            <li class="nav-item"><a href="#servicos">Serviços</a></li>
+            <li class="nav-item"><a href="#sobre">Sobre</a></li>
+            <li class="nav-item"><a href="#blog">Blog</a></li>
+            <li class="nav-item destaque"><a href="#contato">Contato</a></li>
         </ul>
     </nav>
-</header>
+</div>
 <body>
 <main>
