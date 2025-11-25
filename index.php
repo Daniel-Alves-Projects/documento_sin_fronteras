@@ -11,15 +11,15 @@ include('includes/config.php');?>
 
     <div class="carousel-inner">
         <div class="carousel-item active">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpTQZ2ymiyWERMbA6iLXtu-GdpqGqVpWKlLg&s" class="d-block w-100" alt="Banner de Promoção">
+            <img src="elements/banner01.png" class="d-block w-100" alt="Banner de Promoção">
         </div>
 
         <div class="carousel-item">
-            <img src="https://img.pikbest.com/origin/06/30/68/62JpIkbEsTIny.png!w700wp" class="d-block w-100" alt="Novo Produto">
+            <img src="elements/banner02.png" class="d-block w-100" alt="Novo Produto">
         </div>
 
         <div class="carousel-item">
-            <img src="https://graphicsfamily.com/wp-content/uploads/edd/2022/01/Free-Professional-Banner-Template-1180x627.jpg" class="d-block w-100" alt="Novidades da Loja">
+            <img src="elements/banner03.png" class="d-block w-100" alt="Novidades da Loja">
         </div>
     </div>
 
