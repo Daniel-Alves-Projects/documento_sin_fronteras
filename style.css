@@ -13,13 +13,13 @@ body {
     font-family: Arial, sans-serif; 
     margin: auto;
 }
+
 .header-content {
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 100%;
     padding: 10px 200px;
-    
     background-color: #FFFFFF; /* Fundo branco puro para o cabeçalho */
     
 }
@@ -80,7 +80,6 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 0 40px
 }
-
 
 
 d-block w-100 .img {
