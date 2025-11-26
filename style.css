@@ -6,12 +6,15 @@
     padding: 0;
 }
 body {
-    background-color: (180deg, #226214, #43cc25);
+    background-color: #F3F3F3;
     /* Espaçamento entre linhas e legibilidade */
     line-height: 1.5;
     /* Fonte Padrão */
     font-family: Arial, sans-serif; 
     margin: auto;
+    padding-right: 100px;
+    padding-left: 100px;
+    
 }
 
 .header-content {
@@ -19,8 +22,8 @@ body {
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    padding: 10px 200px;
-    background-color: #FFFFFF; /* Fundo branco puro para o cabeçalho */
+    padding: 10px 50px;
+    
     
 }
 
@@ -56,7 +59,7 @@ body {
 
 /* 6. Efeito Hover dos Links (ao passar o mouse) */
 .nav-item a:hover {
-    color: #007BFF; /* Azul Oceano ao passar o mouse */
+    color: green; /* Azul Oceano ao passar o mouse */
     /* text-decoration: underline; */ /* Opcional: Sublinhar ao passar o mouse */
 }
 
@@ -78,12 +81,98 @@ body {
     max-width: 1600px;
     margin: 0 auto; /* Centraliza o carrossel na página */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 0 40px
 }
-
 
 d-block w-100 .img {
     width: 1600px;
     height: auto;
-    padding-right: 100px;
+}
+
+.services-section {
+    padding-top: 50px;
+}
+
+.services-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    padding-left: 50px;
+    padding-bottom: 100px;
+    }
+
+
+.services-cards{
+    background-size: cover;
+    text-decoration: none;
+    border-radius: 35px; /*Define o quão curvo será a borda do elemento*/
+    transition: transform 0.3s, box-shadow 0.3s; /*faz o efeito de transição quando passa o mouse em cima*/
+    display: flex; /*Deixa os itens de dentro da caixa soltos*/
+    width: 750px;
+    height: 400px;
+    gap: 10px;
+}
+
+
+.cards-info  {
+    width: 350px;
+    text-align: left;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    size: 5px;
+    text-decoration: none;
+    margin: 40px;
+}
+
+.cards-info h1 {
+    font-size: 1.8em; 
+    
+
+}
+
+.cards-info p {
+    font-size: 1em;
+}
+
+.refugio {
+    background-image: url('elements/refugio.png');
+}
+
+.gestao {
+    background-image: url('elements/gestao.png');
+}
+
+.protocolo {
+    background-image: url('elements/protocolo.png');
+}
+
+.policia-federal {
+    background-image: url('elements/policia-federal.png');
+}
+
+.direccion {
+    background-image: url('elements/direccion.png');
+}
+
+.sisconare {
+    background-image: url('elements/sisconare.png');
+}
+
+.traduccion {
+    background-image: url('elements/traduccion.png');
+}
+
+.curriculum {
+    background-image: url('elements/curriculum.png');
+}
+
+.cadastro-sei {
+    background-image: url('elements/cadastro-sei.png');
+}
+
+.cpf {
+    background-image: url('elements/cpf.png');
+}
+
+.visa-familiar {
+    background-image: url('elements/visa-familiar.png');
 }
