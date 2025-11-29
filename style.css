@@ -1,10 +1,17 @@
 
+/*
+======================================================
+1. ESTILOS BASE E RESET
+======================================================
+*/
 *{    /* Modelo de Caixa (Box-Sizing) */
     box-sizing: border-box;
 
     /* Limpeza de Espaçamentos Padrão */
     padding: 0;
+    margin: 0; /* Adicionado para garantir o reset completo */
 }
+
 body {
     background-color: #F3F3F3;
     /* Espaçamento entre linhas e legibilidade */
@@ -12,26 +19,35 @@ body {
     /* Fonte Padrão */
     font-family: Arial, sans-serif; 
     margin: auto;
-    padding-right: 100px;
-    padding-left: 100px;
+    
+    /* MODIFICAÇÃO: Paddings mais responsivos para telas grandes */
+    padding-right: 20px; 
+    padding-left: 20px;
+    max-width: 1600px; /* Limita a largura do conteúdo principal */
     
 }
+
+/*
+======================================================
+2. HEADER (CABEÇALHO) E NAVEGAÇÃO
+======================================================
+*/
 
 .header-content {
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    padding: 10px 50px;
-    
-    
+    /* MODIFICAÇÃO: Padding mais responsivo */
+    padding: 10px 20px; 
 }
 
 .logo {
     margin: 0;
 }
 .logo img {
-    width: 300px;
+    /* MODIFICAÇÃO: Tamanho padrão da logo ajustado */
+    width: 200px; 
     height: auto;
 }
 
@@ -40,139 +56,235 @@ body {
     margin: 0;
     padding: 0;
     display: flex;
-    /* justify-content: flex-end; -- Remova, pois o justify-content no .header-content já faz o trabalho */
 }
 
 .nav-item {
-    margin: 0 18px; /* Espaçamento entre os links */
+    /* MODIFICAÇÃO: Espaçamento entre links ajustado */
+    margin: 0 10px; 
 }
 
 .nav-item a {
     text-decoration: none;
-    color: #343A40; /* Cinza Suave para o texto normal */
+    color: #343A40; 
     font-size: 17px;
-    font-weight: 500; /* Levemente mais negrito */
-    padding: 8px 0; /* Espaçamento vertical para a área clicável */
+    font-weight: 500; 
+    padding: 8px 0; 
     display: block;
-    transition: color 0.3s ease; /* Transição suave para o efeito hover */
+    transition: color 0.3s ease; 
 }
 
-/* 6. Efeito Hover dos Links (ao passar o mouse) */
+/* Efeito Hover */
 .nav-item a:hover {
-    color: green; /* Azul Oceano ao passar o mouse */
-    /* text-decoration: underline; */ /* Opcional: Sublinhar ao passar o mouse */
+    color: green; 
 }
 
-/* Adicionando um botão de destaque na navbar (ex: para "Contato") */
-.nav-item.destaque a { /* Aplique esta classe a um <li> específico, por exemplo */
-    background-color: #28A745; /* Verde Água para o fundo do botão */
-    color: #FFFFFF; /* Texto branco */
+/* Botão de Destaque */
+.nav-item.destaque a { 
+    background-color: #28A745; 
+    color: #FFFFFF; 
     padding: 8px 15px;
-    border-radius: 5px; /* Bordas arredondadas */
+    border-radius: 5px; 
     transition: background-color 0.3s ease;
 }
 
 .nav-item.destaque a:hover {
-    background-color: #218838; /* Um tom mais escuro de verde ao passar o mouse */
+    background-color: #218838; 
     color: #FFFFFF;
 }
 
+/*
+======================================================
+3. CARROSSEL
+======================================================
+*/
+
 #meuCarrossel {
     max-width: 1600px;
-    margin: 0 auto; /* Centraliza o carrossel na página */
+    margin: 0 auto; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-d-block w-100 .img {
-    width: 1600px;
+/* Ajuste de seletor: a classe `d-block w-100` está na tag <img>, não é necessário fazer um seletor composto */
+.carousel-item img {
+    width: 100%;
     height: auto;
 }
+
+/*
+======================================================
+4. SEÇÃO DE SERVIÇOS
+======================================================
+*/
 
 .services-section {
     padding-top: 50px;
 }
 
 .services-content {
+    /* MODIFICAÇÃO: Grid com 2 colunas padrão, gap ajustado */
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 80px;
-    padding-left: 50px;
-    padding-bottom: 100px;
-    }
+    gap: 40px; 
+    padding-left: 0; 
+    padding-bottom: 50px;
+    justify-content: center;
+}
 
 
 .services-cards{
     background-size: cover;
     text-decoration: none;
-    border-radius: 35px; /*Define o quão curvo será a borda do elemento*/
-    transition: transform 0.3s, box-shadow 0.3s; /*faz o efeito de transição quando passa o mouse em cima*/
-    display: flex; /*Deixa os itens de dentro da caixa soltos*/
-    width: 750px;
-    height: 400px;
+    border-radius: 35px; 
+    transition: transform 0.3s, box-shadow 0.3s; 
+    display: flex; 
+    /* MODIFICAÇÃO: Largura flexível e altura mínima */
+    width: 100%;
+    min-height: 350px; 
+    height: auto;
+    max-width: 750px;
     gap: 10px;
+    margin: 0 auto;
+}
+
+/* Efeito Hover para os Cards (Opcional, mas útil) */
+.services-cards:hover {
+    transform: translateY(-5px); /* Efeito de elevação */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 
 .cards-info  {
-    width: 350px;
+    /* MODIFICAÇÃO: Ajuste de largura e margem */
+    max-width: 350px;
+    width: 100%;
     text-align: left;
     color: white;
     font-family: Arial, Helvetica, sans-serif;
-    size: 5px;
     text-decoration: none;
-    margin: 40px;
+    margin: 40px 20px; 
 }
 
 .cards-info h1 {
     font-size: 1.8em; 
-    
-
 }
 
 .cards-info p {
     font-size: 1em;
 }
 
-.refugio {
-    background-image: url('elements/refugio.png');
+/* Classes para Backgrounds (mantidas) */
+.refugio { background-image: url('elements/refugio.png'); }
+.gestao { background-image: url('elements/gestao.png'); }
+.protocolo { background-image: url('elements/protocolo.png'); }
+.policia-federal { background-image: url('elements/policia-federal.png'); }
+.direccion { background-image: url('elements/direccion.png'); }
+.sisconare { background-image: url('elements/sisconare.png'); }
+.traduccion { background-image: url('elements/traduccion.png'); }
+.curriculum { background-image: url('elements/curriculum.png'); }
+.cadastro-sei { background-image: url('elements/cadastro-sei.png'); }
+.cpf { background-image: url('elements/cpf.png'); }
+.visa-familiar { background-image: url('elements/visa-familiar.png'); }
+
+/*
+======================================================
+5. MEDIA QUERIES (RESPONSIVIDADE)
+======================================================
+*/
+
+/* --- Media Query para Telas Maiores (máx. 1200px) --- */
+@media (max-width: 1200px) {
+    .services-content {
+        gap: 20px; /* Reduz o gap entre os cards em telas de laptop */
+    }
 }
 
-.gestao {
-    background-image: url('elements/gestao.png');
+
+/* --- Media Query para Tablets (máx. 992px) --- */
+@media (max-width: 992px) {
+    body {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    
+    .header-content {
+        flex-wrap: wrap; /* Permite que o header se torne coluna se o conteúdo não couber */
+        justify-content: center; 
+    }
+
+    .logo {
+        margin-bottom: 10px; 
+    }
+
+    .navbar {
+        width: 100%; 
+    }
+
+    .nav-links {
+        justify-content: center; 
+    }
+
+    .nav-item {
+        margin: 0 8px; 
+    }
 }
 
-.protocolo {
-    background-image: url('elements/protocolo.png');
-}
+/* --- Media Query para Telas de Celulares (máx. 768px) --- */
+@media (max-width: 768px) {
+    
+    /* Configuração do Body */
+    body {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+    
+    /* Configuração do Header */
+    .header-content {
+        flex-direction: column; /* Empilha logo e menu */
+        padding: 10px 5px;
+    }
 
-.policia-federal {
-    background-image: url('elements/policia-federal.png');
-}
+    .logo img {
+        width: 150px; /* Logo menor em mobile */
+    }
 
-.direccion {
-    background-image: url('elements/direccion.png');
-}
+    .nav-links {
+        flex-direction: column; /* Empilha os links verticalmente */
+        text-align: center;
+        width: 100%;
+    }
 
-.sisconare {
-    background-image: url('elements/sisconare.png');
-}
+    .nav-item {
+        margin: 5px 0; /* Espaçamento vertical entre os itens do menu */
+    }
+    
+    /* Faz o botão de destaque ocupar a largura total no mobile */
+    .nav-item.destaque a { 
+        padding: 10px 0;
+        width: 100%;
+        box-sizing: border-box; /* Garante que o padding não exceda o 100% */
+    }
 
-.traduccion {
-    background-image: url('elements/traduccion.png');
-}
+    /* Configuração da Seção de Serviços */
+    .services-content {
+        grid-template-columns: 1fr; /* Muda para 1 coluna */
+        padding: 0 5px;
+        gap: 25px;
+    }
+    
+    .services-cards {
+        min-height: 250px; /* Altura menor em mobile */
+    }
 
-.curriculum {
-    background-image: url('elements/curriculum.png');
-}
+    .cards-info {
+        margin: 20px; /* Margem menor em mobile */
+        max-width: 90%;
+    }
 
-.cadastro-sei {
-    background-image: url('elements/cadastro-sei.png');
-}
+    .cards-info h1 {
+        font-size: 1.5em; /* Fonte do título menor */
+    }
 
-.cpf {
-    background-image: url('elements/cpf.png');
-}
-
-.visa-familiar {
-    background-image: url('elements/visa-familiar.png');
+    .cards-info p {
+        font-size: 0.9em; /* Fonte do parágrafo menor */
+    }
 }
