@@ -32,8 +32,8 @@ include('includes/config.php');?>
         <span class="visually-hidden">Próximo</span>
     </button>
 </div>
-<div class="services-section">
-    <div class="services-content" id="services">
+<div class="services-section" id="services">
+    <div class="services-content">
         
         <div class="services-cards service-card refugio" data-service-name="Desarchivamiento del proceso de refugio">
             <div class="cards-info">

@@ -24,7 +24,7 @@
 </head>
 
 
-<div class="header-content" id="inicio"> 
+<div class="header-content"> 
     <div class="logo"> 
         <a href="#home"> 
             <img src="elements/logo.svg" alt="Documento Sin Fronteras - Página Inicial">
@@ -32,7 +32,7 @@
     </div>
     <nav class="navbar"> 
         <ul class="nav-links">
-            <li class="nav-item"><a href="#inicio">Inicio</a></li>
+            <li class="nav-item"><a href="#meuCarrossel">Inicio</a></li>
             <li class="nav-item"><a href="#services">Serviços</a></li>
             <li class="nav-item"><a href="#sobre">Sobre</a></li>
             <li class="nav-item"><a href="#blog">Blog</a></li>
