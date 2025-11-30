@@ -155,6 +155,8 @@ body {
 
 .cards-info  {
     /* MODIFICAÇÃO: Ajuste de largura e margem */
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
     max-width: 350px;
     width: 100%;
     text-align: left;
@@ -162,6 +164,7 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     text-decoration: none;
     margin: 40px 20px; 
+    border-radius: 10%;
 }
 
 .cards-info h1 {
@@ -181,9 +184,9 @@ body {
 .sisconare { background-image: url('elements/sisconare.png'); }
 .traduccion { background-image: url('elements/traduccion.png'); }
 .curriculum { background-image: url('elements/curriculum.png'); }
-.cadastro-sei { background-image: url('elements/cadastro-sei.png'); }
+.cadastro-sei { background-image: url('elements/sei.png'); }
 .cpf { background-image: url('elements/cpf.png'); }
-.visa-familiar { background-image: url('elements/visa-familiar.png'); }
+.visa-familiar { background-image: url('elements/visa.png'); }
 
 /*
 ======================================================
