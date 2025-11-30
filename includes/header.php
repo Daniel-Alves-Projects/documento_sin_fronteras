@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -7,7 +6,6 @@
     <meta name="description" content="">
     <meta name="keywords" content="">
     <meta name="author" content="document_sin_fronteiras">
-    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="">
     <meta property="og:title" content="NestSafe | ">
@@ -26,7 +24,7 @@
 </head>
 
 
-<div class="header-content"> 
+<div class="header-content" id="inicio"> 
     <div class="logo"> 
         <a href="#home"> 
             <img src="elements/logo.svg" alt="Documento Sin Fronteras - Página Inicial">
@@ -35,7 +33,7 @@
     <nav class="navbar"> 
         <ul class="nav-links">
             <li class="nav-item"><a href="#inicio">Inicio</a></li>
-            <li class="nav-item"><a href="#servicos">Serviços</a></li>
+            <li class="nav-item"><a href="#services">Serviços</a></li>
             <li class="nav-item"><a href="#sobre">Sobre</a></li>
             <li class="nav-item"><a href="#blog">Blog</a></li>
             <li class="nav-item destaque"><a href="#contato">Contato</a></li>
@@ -43,4 +41,3 @@
     </nav>
 </div>
 <body>
-

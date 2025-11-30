@@ -1,4 +1,3 @@
-
 /*
 ======================================================
 1. ESTILOS BASE E RESET
@@ -9,7 +8,7 @@
 
     /* Limpeza de Espaçamentos Padrão */
     padding: 0;
-    margin: 0; /* Adicionado para garantir o reset completo */
+    margin: 0; 
 }
 
 body {
@@ -20,11 +19,13 @@ body {
     font-family: Arial, sans-serif; 
     margin: auto;
     
-    /* MODIFICAÇÃO: Paddings mais responsivos para telas grandes */
+    /* Paddings mais responsivos para telas grandes */
     padding-right: 20px; 
     padding-left: 20px;
     max-width: 1600px; /* Limita a largura do conteúdo principal */
     
+    /* 💥 AJUSTE PARA O HEADER FIXO 💥 */
+    padding-top: 80px; /* Adiciona espaço no topo para que o conteúdo não fique sob o header fixo. Ajuste este valor se 80px for muito/pouco. */
 }
 
 /*
@@ -40,6 +41,15 @@ body {
     width: 100%;
     /* MODIFICAÇÃO: Padding mais responsivo */
     padding: 10px 20px; 
+    
+    /* 💥 NOVO: ESTILOS PARA FIXAR O HEADER 💥 */
+    position: fixed; /* Fixa o elemento na tela */
+    top: 0; /* Garante que ele fique no topo */
+    left: 0;
+    right: 0;
+    z-index: 100; /* Garante que fique acima do conteúdo (um valor menor que o modal) */
+    background-color: #F3F3F3; /* Garante que o fundo do header não seja transparente ao rolar */
+    border-bottom: 1px solid #E0E0E0; /* Opcional: Adiciona uma linha sutil para separar do conteúdo */
 }
 
 .logo {
@@ -137,13 +147,15 @@ body {
     border-radius: 35px; 
     transition: transform 0.3s, box-shadow 0.3s; 
     display: flex; 
-    /* MODIFICAÇÃO: Largura flexível e altura mínima */
+    /* MODIFICÇÃO: Largura flexível e altura mínima */
     width: 100%;
     min-height: 350px; 
     height: auto;
     max-width: 750px;
     gap: 10px;
     margin: 0 auto;
+    /* Adicionado para que a div se comporte como um botão clicável */
+    cursor: pointer; 
 }
 
 /* Efeito Hover para os Cards (Opcional, mas útil) */
@@ -289,5 +301,131 @@ body {
 
     .cards-info p {
         font-size: 0.9em; /* Fonte do parágrafo menor */
+    }
+}
+
+
+/*
+======================================================
+6. ESTILOS DO MODAL DE SOLICITAÇÃO (Novo Bloco)
+======================================================
+*/
+
+/* O Modal (fundo escuro transparente que cobre toda a tela) */
+.modal {
+    display: none; /* Escondido por padrão */
+    position: fixed; /* Fica parado na tela, mesmo com scroll */
+    z-index: 1000; /* Fica acima de TUDO na página */
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%;
+    overflow: auto; /* Permite scroll se o conteúdo for grande */
+    background-color: rgba(0,0,0,0.6); /* Fundo preto transparente */
+}
+
+/* O Conteúdo do Modal (a caixa de formulário) */
+.modal-content {
+    background-color: #fefefe;
+    margin: 10% auto; /* 10% do topo e centralizado */
+    padding: 30px;
+    border: 1px solid #888;
+    width: 90%; 
+    max-width: 550px; /* Largura máxima em desktops */
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+/* O botão de fechar (X) */
+.close-button {
+    color: #aaa;
+    float: right;
+    font-size: 32px;
+    font-weight: bold;
+    line-height: 1; /* Alinhamento vertical do 'X' */
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: #333;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Estilos para o formulário */
+#contact-form label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #343A40;
+}
+
+#contact-form input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+/* Estilos dos Botões de Ação */
+#step-confirmation button,
+#step-form button {
+    padding: 12px 20px;
+    margin: 10px 5px 0 0;
+    cursor: pointer;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+#btn-yes { 
+    background-color: #28A745; /* Cor verde do seu menu */
+    color: white; 
+}
+#btn-yes:hover { background-color: #218838; }
+
+#btn-no { 
+    background-color: #6C757D; /* Cinza */
+    color: white; 
+}
+#btn-no:hover { background-color: #5A6268; }
+
+#btn-send-email { 
+    background-color: #007bff; /* Azul */
+    color: white; 
+}
+#btn-send-email:hover { background-color: #0056b3; }
+
+#btn-send-whatsapp { 
+    background-color: #25D366; /* Verde WhatsApp */
+    color: white; 
+}
+#btn-send-whatsapp:hover { background-color: #1FAF54; }
+
+.nota {
+    font-size: 0.8em;
+    color: #6C757D;
+    margin-top: 15px;
+    text-align: center;
+}
+
+/* Adaptação do modal para telas menores */
+@media (max-width: 768px) {
+    .modal-content {
+        margin: 5% auto;
+        padding: 20px;
+    }
+
+    #step-confirmation button,
+    #step-form button {
+        display: block;
+        width: 100%;
+        margin-right: 0;
+        margin-left: 0;
+        margin-top: 10px;
     }
 }
