@@ -118,7 +118,7 @@ include('includes/config.php');?>
 <div id="service-modal" class="modal">
     <div class="modal-content">
         <span class="close-button">&times;</span>
-        
+
         <h2>Solicitar Serviço: <span id="modal-service-name"></span></h2>
         
         <div id="step-confirmation">
@@ -149,4 +149,32 @@ include('includes/config.php');?>
         </div>
     </div>
 </div>
-<?php include('include/footer.php')?>
+
+<div id="sobre" class="about">
+    <div class="about-content">
+        <div class="about-text">
+            <h1>Sobre Nós</h1>
+            <p>Nuestra Misión: Derribar las Barreras Documentales
+En Documentos Sin Fronteras, nacimos de una simple pero poderosa convicción: que la burocracia nunca debe ser el límite para las aspiraciones de una persona. Entendemos que navegar el laberinto de visas, pasaportes, legalizaciones y trámites migratorios puede ser confuso, estresante y, a menudo, paralizante.
+Nuestra misión es clara: ser tu guía experta y confiable en este viaje. Nos dedicamos a simplificar lo complejo, proporcionando información precisa, actualizada y fácilmente accesible para que puedas obtener tus documentos, revalidar tu identidad y avanzar hacia tu próximo objetivo, sin importar dónde te encuentres.
+Somos más que una página web; somos tu aliado en el proceso.</p>
+        </div>
+
+    </div>
+</div>
+
+<div class="contact">
+    <div class="contact-content">
+        <div class="contact-text">
+            <h1>Contato</h1>
+            
+                <p>E-mail = <a href="">atendimento@documentosinfronteras.com.br</a></p>
+            </a>
+            
+            <p>Teléfono/Whatsapp : <a href="">(49) 9 9999-9999</a></p>
+            
+
+        </div>
+    </div>
+</div>
+<?php include('includes/footer.php')?>

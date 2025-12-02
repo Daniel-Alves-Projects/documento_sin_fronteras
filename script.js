@@ -120,7 +120,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const body = formatMessage(data);
 
         // Cria o link para abrir o cliente de e-mail do usuário
-        const mailtoLink = `mailto:${YOUR_COMPANY_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        const mailtoLink = `mailto:${"contato83204660+3fxhlxobt4roi9zi3wi5@app.trello.com"}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 
         window.location.href = mailtoLink;
         
