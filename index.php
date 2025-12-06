@@ -32,9 +32,9 @@ include('includes/config.php');?>
         <span class="visually-hidden">Próximo</span>
     </button>
 </div>
-<div class="services-section" id="services">
+<div class="services-section"  id="services">
+    <div class="section-title"><h1>Nossos Serviços</h1></div>
     <div class="services-content">
-        
         <div class="services-cards service-card refugio" data-service-name="Desarchivamiento del proceso de refugio">
             <div class="cards-info">
                 <h1>Desarchivamiento del proceso de refugio</h1>
@@ -117,7 +117,7 @@ include('includes/config.php');?>
 
 <div id="service-modal" class="modal">
     <div class="modal-content">
-        <span class="close-button">&times;</span>
+        <span class="section-title">&times;</span>
 
         <h2>Solicitar Serviço: <span id="modal-service-name"></span></h2>
         
@@ -150,7 +150,7 @@ include('includes/config.php');?>
     </div>
 </div>
 
-<div id="sobre" class="about">
+<div id="sobre" class="section-title">
     <div class="about-content">
         <div class="about-text">
             <h1>Sobre Nós</h1>
@@ -163,7 +163,7 @@ Somos más que una página web; somos tu aliado en el proceso.</p>
     </div>
 </div>
 
-<div class="contact">
+<div class="section-title">
     <div class="contact-content">
         <div class="contact-text">
             <h1>Contato</h1>
