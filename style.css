@@ -1,82 +1,90 @@
 /*
 ======================================================
-1. ESTILOS BASE E RESET
+1. VARIÁVEIS CSS (Opcional, mas útil para padronização)
 ======================================================
 */
-*{    /* Modelo de Caixa (Box-Sizing) */
-    box-sizing: border-box;
+:root {
+    --primary-color: #28A745; /* Verde principal */
+    --secondary-color: #343A40; /* Texto escuro */
+    --background-light: #F3F3F3;
+    --border-color: #E0E0E0;
+    --text-light: #AAAAAA; /* Texto para o footer */
+}
 
+/*
+======================================================
+2. ESTILOS BASE E RESET
+======================================================
+*/
+* {
+    /* Modelo de Caixa (Box-Sizing) - Essencial para layout responsivo */
+    box-sizing: border-box;
     /* Limpeza de Espaçamentos Padrão */
     padding: 0;
     margin: 0; 
 }
 
 body {
-    background-color: #F3F3F3;
-    /* Espaçamento entre linhas e legibilidade */
-    line-height: 1.5;
-    /* Fonte Padrão */
+    background-color: var(--background-light);
+    line-height: 1.5; /* Espaçamento entre linhas para legibilidade */
     font-family: Arial, sans-serif; 
-    margin: auto;
-    margin-top: 130px;
+    margin: 0 auto;
+    max-width: 1400px; /* Limite máximo para telas muito grandes */
     
-    /* Paddings mais responsivos para telas grandes */
-    padding-right: 80px; 
-    padding-left: 80px;
-    max-width: 1200px; /* Limita a largura do conteúdo principal */
+    /* Paddings mais responsivos, centralizando o conteúdo */
+    padding: 0 40px; 
     
     /* 💥 AJUSTE PARA O HEADER FIXO 💥 */
-    padding-top: 80px; /* Adiciona espaço no topo para que o conteúdo não fique sob o header fixo. Ajuste este valor se 80px for muito/pouco. */
+    /* Adiciona espaço no topo para que o conteúdo não fique sob o header fixo. */
+    padding-top: 80px; 
 }
 
 /*
 ======================================================
-2. HEADER (CABEÇALHO) E NAVEGAÇÃO
+3. HEADER (CABEÇALHO) E NAVEGAÇÃO
 ======================================================
 */
+
+.main-header {
+    /* Estilos para fixar o header no topo da tela */
+    position: fixed; 
+    top: 0; 
+    left: 0;
+    right: 0;
+    z-index: 100; /* Garante que fique acima do conteúdo */
+    background-color: var(--background-light); 
+    border-bottom: 1px solid var(--border-color); 
+    margin: 0 auto;
+}
 
 .header-content {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    /* Limita o conteúdo do header à mesma largura do body e centraliza */
+    max-width: 1400px;
+    margin: 0 auto; 
+    padding: 10px 40px; 
     width: 100%;
-    /* MODIFICAÇÃO: Padding mais responsivo */
-    padding: 10px 150px; 
-    
-    /* 💥 NOVO: ESTILOS PARA FIXAR O HEADER 💥 */
-    position: fixed; /* Fixa o elemento na tela */
-    top: 0; /* Garante que ele fique no topo */
-    left: 0;
-    right: 0;
-    z-index: 100; /* Garante que fique acima do conteúdo (um valor menor que o modal) */
-    background-color: #F3F3F3; /* Garante que o fundo do header não seja transparente ao rolar */
-    border-bottom: 1px solid #E0E0E0; /* Opcional: Adiciona uma linha sutil para separar do conteúdo */
 }
 
-.logo {
-    margin: 0;
-}
 .logo img {
-    /* MODIFICAÇÃO: Tamanho padrão da logo ajustado */
-    width: 200px; 
+    width: 200px; /* Tamanho padrão da logo */
     height: auto;
 }
 
 .nav-links {
     list-style: none;
-    margin: 0;
-    padding: 0;
     display: flex;
 }
 
 .nav-item {
-    /* MODIFICAÇÃO: Espaçamento entre links ajustado */
-    margin: 0 10px; 
+    margin: 0 15px; /* Espaçamento entre links ajustado */
 }
 
 .nav-item a {
     text-decoration: none;
-    color: #343A40; 
+    color: var(--secondary-color); 
     font-size: 20px;
     font-weight: 500; 
     padding: 8px 0; 
@@ -86,12 +94,12 @@ body {
 
 /* Efeito Hover */
 .nav-item a:hover {
-    color: green; 
+    color: var(--primary-color); 
 }
 
 /* Botão de Destaque */
 .nav-item.destaque a { 
-    background-color: #28A745; 
+    background-color: var(--primary-color); 
     color: #FFFFFF; 
     padding: 8px 15px;
     border-radius: 5px; 
@@ -99,98 +107,115 @@ body {
 }
 
 .nav-item.destaque a:hover {
-    background-color: #218838; 
+    background-color: #218838; /* Verde mais escuro no hover */
     color: #FFFFFF;
 }
 
 /*
 ======================================================
-3. CARROSSEL
+4. CARROSSEL
 ======================================================
 */
 
 #meuCarrossel {
-    max-width: 1600px;
-    margin: 0 auto; 
-    margin-bottom: 100px;
+    /* AJUSTE: Removemos as margens negativas e usamos 'margin: 0 auto' para centralizar */
+    max-width: 100%; 
+    margin: 0 auto 100px auto; /* Centraliza e adiciona margem inferior */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Ajuste de seletor: a classe `d-block w-100` está na tag <img>, não é necessário fazer um seletor composto */
 .carousel-item img {
     width: 100%;
     height: auto;
 }
 
+
 /*
 ======================================================
-4. SEÇÃO DE SERVIÇOS
+5. SEÇÕES DE CONTEÚDO (Geral)
 ======================================================
 */
 
-.services-section {
-    padding-top: 50px;
-    margin-left: 50px;
-    margin-right: 50px;
+/* Título Principal das Seções */
+.section-title {
+    text-align: center;
+    font-size: 50px;
+    color: #218838;
+    margin-bottom: 50px;
 }
 
-.section-title h1 {
-    text-align: center;
+/* Centraliza o conteúdo da maioria das seções */
+.services-section, .contact-section, .blog-section {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin: 0 auto; /* Centraliza a seção no body */
+    padding-left: 0; 
+    padding-right: 0;
 }
+
+.contact-section {
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.blog-section {
+    margin-bottom: 50px;
+}
+
+
+/*
+======================================================
+6. SEÇÃO DE SERVIÇOS
+======================================================
+*/
 
 .services-content {
-    /* MODIFICAÇÃO: Grid com 2 colunas padrão, gap ajustado */
+    /* Grid padrão para desktop: 3 colunas */
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
     gap: 40px; 
     padding-bottom: 50px;
     justify-content: center;
 }
 
-
-.services-cards{
+.services-cards {
     background-size: cover;
+    background-position: center; 
     text-decoration: none;
     border-radius: 35px; 
     transition: transform 0.3s, box-shadow 0.3s; 
     display: flex; 
-    /* MODIFICÇÃO: Largura flexível e altura mínima */
-    width: 500px;
-    height: 350px;
-    gap: 10px;
-    margin: 0 auto;
-    /* Adicionado para que a div se comporte como um botão clicável */
+    align-items: flex-end; 
+    width: 100%; 
+    min-height: 350px; 
     cursor: pointer; 
 }
 
-/* Efeito Hover para os Cards (Opcional, mas útil) */
 .services-cards:hover {
-    transform: translateY(-5px); /* Efeito de elevação */
+    transform: translateY(-5px); 
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 
 .cards-info  {
-    /* MODIFICAÇÃO: Ajuste de largura e margem */
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 10px;
-    max-width: 400px;
-    width: 100%;
-    text-align: left;
+    background-color: rgba(0, 0, 0, 0.6); 
+    padding: 15px;
     color: white;
-    font-size: 15px;
-    font-family: Arial, Helvetica, sans-serif;
-    text-decoration: none;
-    margin: 40px 20px; 
-    border-radius: 10%;
+    text-align: left;
+    width: 100%; 
+    border-bottom-left-radius: 35px;
+    border-bottom-right-radius: 35px;
 }
 
 .cards-info h1 {
-    font-size: 1.8em; 
+    font-size: 1.4em; 
+    margin-top: 0;
+    color: white; 
 }
 
 .cards-info p {
-    font-size: 1em;
+    font-size: 0.9em;
+    margin-bottom: 0;
 }
 
 /* Classes para Backgrounds (mantidas) */
@@ -206,173 +231,86 @@ body {
 .cpf { background-image: url('elements/cpf.png'); }
 .visa-familiar { background-image: url('elements/visa.png'); }
 
+/*
+======================================================
+7. SEÇÃO SOBRE NÓS
+======================================================
+*/
 
-
-/* Sessão About*/
-.about-content {
-    padding-top: 150px;
-    padding-bottom: 150px;
-    display: flex;
-    margin: auto;
-    text-align: center;
-    font-size: 25px;
+.about-section {
+    background-color: #E0E0E0; 
+    /* AJUSTE: Expande para as bordas da tela usando calc() para compensar o max-width do body */
+    margin: 0 calc(50% - 700px); /* 700px é metade do max-width de 1400px */
+    width: auto; 
+    padding-left: 40px; 
+    padding-right: 40px;
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
- .section-title h1{
-    font-size: 50px;
-    color: #218838;
- }
 
- .contact {
-    margin-top: 150px;
-    margin-bottom: 150px;
- }
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: justify; 
+    font-size: 20px;
+    line-height: 1.8;
+}
 
- .contact-text {
+/*
+======================================================
+8. SEÇÃO CONTATO
+======================================================
+*/
+
+.contact-text {
     font-size: 25px;
-    color: #218838;
- }
+    color: var(--primary-color);
+    text-align: center;
+}
 
- .contact-text a{
+.contact-text a {
     text-decoration: none;
     color: white;
-    background-color: #218838;
-    padding: 6px;
-    width: 100%;
-    margin: 30px 20px; 
+    background-color: var(--primary-color);
+    padding: 10px 20px;
     border-radius: 30px;
- }
-/*
-======================================================
-5. MEDIA QUERIES (RESPONSIVIDADE)
-======================================================
-*/
-
-/* --- Media Query para Telas Maiores (máx. 1200px) --- */
-@media (max-width: 1200px) {
-    .services-content {
-        gap: 20px; /* Reduz o gap entre os cards em telas de laptop */
-    }
+    display: inline-block; 
+    margin-top: 15px;
+    transition: background-color 0.3s ease;
 }
 
-
-/* --- Media Query para Tablets (máx. 992px) --- */
-@media (max-width: 992px) {
-    body {
-        padding-left: 10px;
-        padding-right: 10px;
-    }
-    
-    .header-content {
-        flex-wrap: wrap; /* Permite que o header se torne coluna se o conteúdo não couber */
-        justify-content: center; 
-    }
-
-    .logo {
-        margin-bottom: 10px; 
-    }
-
-    .navbar {
-        width: 100%; 
-    }
-
-    .nav-links {
-        justify-content: center; 
-    }
-
-    .nav-item {
-        margin: 0 8px; 
-    }
-}
-
-/* --- Media Query para Telas de Celulares (máx. 768px) --- */
-@media (max-width: 768px) {
-    
-    /* Configuração do Body */
-    body {
-        padding-left: 5px;
-        padding-right: 5px;
-    }
-    
-    /* Configuração do Header */
-    .header-content {
-        flex-direction: column; /* Empilha logo e menu */
-        padding: 10px 5px;
-    }
-
-    .logo img {
-        width: 150px; /* Logo menor em mobile */
-    }
-
-    .nav-links {
-        flex-direction: column; /* Empilha os links verticalmente */
-        text-align: center;
-        width: 100%;
-    }
-
-    .nav-item {
-        margin: 5px 0; /* Espaçamento vertical entre os itens do menu */
-    }
-    
-    /* Faz o botão de destaque ocupar a largura total no mobile */
-    .nav-item.destaque a { 
-        padding: 10px 0;
-        width: 100%;
-        box-sizing: border-box; /* Garante que o padding não exceda o 100% */
-    }
-
-    /* Configuração da Seção de Serviços */
-    .services-content {
-        grid-template-columns: 1fr; /* Muda para 1 coluna */
-        padding: 0 5px;
-        gap: 25px;
-    }
-    
-    .services-cards {
-        min-height: 250px; /* Altura menor em mobile */
-    }
-
-    .cards-info {
-        margin: 20px; /* Margem menor em mobile */
-        max-width: 90%;
-    }
-
-    .cards-info h1 {
-        font-size: 1.5em; /* Fonte do título menor */
-    }
-
-    .cards-info p {
-        font-size: 0.9em; /* Fonte do parágrafo menor */
-    }
+.contact-text a:hover {
+    background-color: #218838;
 }
 
 
 /*
 ======================================================
-6. ESTILOS DO MODAL DE SOLICITAÇÃO (Novo Bloco)
+9. ESTILOS DO MODAL DE SOLICITAÇÃO
 ======================================================
 */
 
-/* O Modal (fundo escuro transparente que cobre toda a tela) */
+/* O Modal (fundo escuro transparente) */
 .modal {
-    display: none; /* Escondido por padrão */
-    position: fixed; /* Fica parado na tela, mesmo com scroll */
-    z-index: 1000; /* Fica acima de TUDO na página */
+    display: none; 
+    position: fixed; 
+    z-index: 1000; 
     left: 0;
     top: 0;
     width: 100%; 
     height: 100%;
-    overflow: auto; /* Permite scroll se o conteúdo for grande */
-    background-color: rgba(0,0,0,0.6); /* Fundo preto transparente */
+    overflow: auto; 
+    background-color: rgba(0,0,0,0.6); 
 }
 
 /* O Conteúdo do Modal (a caixa de formulário) */
 .modal-content {
     background-color: #fefefe;
-    margin: 10% auto; /* 10% do topo e centralizado */
+    margin: 10% auto; 
     padding: 30px;
     border: 1px solid #888;
     width: 90%; 
-    max-width: 550px; /* Largura máxima em desktops */
+    max-width: 550px; 
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 }
@@ -383,14 +321,13 @@ body {
     float: right;
     font-size: 32px;
     font-weight: bold;
-    line-height: 1; /* Alinhamento vertical do 'X' */
+    line-height: 1; 
+    cursor: pointer;
 }
 
 .close-button:hover,
 .close-button:focus {
     color: #333;
-    text-decoration: none;
-    cursor: pointer;
 }
 
 /* Estilos para o formulário */
@@ -398,7 +335,7 @@ body {
     display: block;
     margin-top: 10px;
     font-weight: bold;
-    color: #343A40;
+    color: var(--secondary-color);
 }
 
 #contact-form input {
@@ -423,11 +360,12 @@ body {
     transition: background-color 0.3s ease;
 }
 
-#btn-yes { 
-    background-color: #28A745; /* Cor verde do seu menu */
+/* Botões específicos */
+#btn-yes, #btn-send-whatsapp { 
+    background-color: var(--primary-color); 
     color: white; 
 }
-#btn-yes:hover { background-color: #218838; }
+#btn-yes:hover, #btn-send-whatsapp:hover { background-color: #218838; }
 
 #btn-no { 
     background-color: #6C757D; /* Cinza */
@@ -441,12 +379,6 @@ body {
 }
 #btn-send-email:hover { background-color: #0056b3; }
 
-#btn-send-whatsapp { 
-    background-color: #25D366; /* Verde WhatsApp */
-    color: white; 
-}
-#btn-send-whatsapp:hover { background-color: #1FAF54; }
-
 .nota {
     font-size: 0.8em;
     color: #6C757D;
@@ -454,8 +386,146 @@ body {
     text-align: center;
 }
 
-/* Adaptação do modal para telas menores */
+/*
+======================================================
+10. FOOTER
+======================================================
+*/
+
+footer {
+  background: var(--background-light); 
+  padding: 60px 0 30px;
+  /* AJUSTE: Expande para as bordas da tela, usando a mesma lógica do about-section */
+  margin: 100px calc(50% - 700px) 0 calc(50% - 700px);
+  width: auto;
+}
+
+.footer-container {
+    padding: 0 40px; 
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.footer-content p {
+  color: var(--secondary-color);
+  font-size: 0.875rem;
+  margin: 0;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 30px;
+  border-top: 1px solid var(--text-light);
+}
+
+.footer-bottom p {
+  color: var(--secondary-color);
+  font-size: 0.75rem;
+  margin: 5px 0;
+}
+
+
+/*
+======================================================
+11. MEDIA QUERIES (RESPONSIVIDADE)
+======================================================
+*/
+
+/* 11.1. Telas Médias/Tablets (máx. 1200px) */
+@media (max-width: 1200px) {
+    .services-content {
+        /* Muda para 2 colunas */
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+    }
+}
+
+/* 11.2. Telas Pequenas/Celulares (máx. 768px) */
 @media (max-width: 768px) {
+    
+    /* Configuração do Body */
+    body {
+        padding: 0 15px;
+        padding-top: 70px; /* Ajusta o padding para o header menor */
+    }
+
+    /* Configuração do Header */
+    .header-content {
+        flex-direction: column; 
+        padding: 10px 15px;
+    }
+    
+    .logo img {
+        width: 150px; 
+        margin-bottom: 10px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .nav-item {
+        margin: 5px 5px; 
+    }
+    
+    .nav-item a {
+        font-size: 16px;
+    }
+    
+    /* Configuração do Carrossel/Seções com Margem Lateral Fixa */
+    #meuCarrossel {
+        margin: 0 auto 50px auto; 
+    }
+
+    /* AJUSTE: Em mobile, voltamos a usar margem negativa simples, respeitando o padding: 15px do body */
+    .about-section, footer {
+        margin-left: -15px; 
+        margin-right: -15px;
+        padding-left: 15px;
+        padding-right: 15px;
+        width: auto;
+    }
+    
+    .about-section {
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+    footer {
+        margin-top: 50px;
+    }
+    
+    /* Configuração da Seção de Serviços */
+    .services-content {
+        grid-template-columns: 1fr; /* Muda para 1 coluna */
+        gap: 25px;
+    }
+    
+    .services-cards {
+        min-height: 250px; 
+    }
+
+    .cards-info h1 {
+        font-size: 1.2em; 
+    }
+
+    .cards-info p {
+        font-size: 0.8em; 
+    }
+    
+    .section-title {
+        font-size: 35px;
+    }
+
+    /* Adaptação do modal para telas menores */
     .modal-content {
         margin: 5% auto;
         padding: 20px;
@@ -469,38 +539,14 @@ body {
         margin-left: 0;
         margin-top: 10px;
     }
-}
+    
+    /* Footer */
+    .footer-container {
+        padding: 0 15px;
+    }
 
-/* FOOTER*/
-footer {
-  background: var(--secondary); /* Fundo cinza */
-  padding: 60px 0 30px;
-  margin-top: 150px;
-}
-
-.footer-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 30px;
-  margin-bottom: 40px;
-}
-
-.footer-content p {
-  color: var(--text-light);
-  font-size: 0.875rem;
-  margin: 0;
-}
-
-.footer-bottom {
-  text-align: center;
-  padding-top: 30px;
-  border-top: 1px solid var(--border);
-}
-
-.footer-bottom p {
-  color: var(--text-light);
-  font-size: 0.75rem;
-  margin: 0;
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
 }

@@ -7,14 +7,14 @@
                     <img src="elements/logo.svg">
                 </a>
             </div>
-            <p>Copyright © 2024 NestSafe. Todos os direitos reservados.</p>
+            <p>Copyright © 2025 DocumentosSinFronteiras. Todos los derechos reservados.</p>
         </div>
         
         <div class="footer-bottom">
-            <p>© 2025 DocumentosSinFronteiras – Todos os direitos reservados. - CNPJ 00.000.0000000/00 – Inscrição Estadual: 000000000</p>
-            <p>Fone/WhatsApp: (49) 99999-9999 - E-mail: atendimento@documentossinfronteiras.com.br</p>
+            <p>© 2025 DocumentosSinFronteiras – Todos los derechos reservados. - CNPJ 00.000.0000000/00 – Inscripción Estatal: 000000000</p>
+            <p>Teléfono/WhatsApp: (49) 99999-9999 - E-mail: atendimento@documentossinfronteiras.com.br</p>
             <p>Concórdia/SC, Brasil</p>
-            <p>Responsável Técnico Amaury Fernandez</p>
+            <p>Responsable Técnico Amaury Fernandez</p>
         </div>
     </div>
 </footer>
