@@ -120,7 +120,7 @@ body {
 #meuCarrossel {
     /* AJUSTE: Removemos as margens negativas e usamos 'margin: 0 auto' para centralizar */
     max-width: 100%; 
-    margin: 0 auto 100px auto; /* Centraliza e adiciona margem inferior */
+    margin-top: 80px; /* Centraliza e adiciona margem inferior */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
