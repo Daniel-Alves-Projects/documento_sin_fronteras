@@ -42,7 +42,7 @@ include('includes/config.php');
         <div class="services-content">
             <div class="services-cards service-card refugio" data-service-name="Desarchivamiento del proceso de refugio">
                 <div class="cards-info">
-                    <h1>Desarchivamiento del proceso de refugio</h1>
+                    <h1>Desarchivamiento del proceso de refúgio</h1>
                     <p>"Si tu proceso de refugio ha sido archivado, nosotros nos encargamos de su reactivación total. Gestionamos el complejo Pedido de Desarchivamiento a través de la plataforma SEI, garantizando que tu expediente se reabra sin complicaciones. De esta manera, podrás volver a renovar tu documentación migratoria y asegurar la continuidad de tu estatus en Brasil."</p>
                 </div>
             </div>
@@ -56,7 +56,7 @@ include('includes/config.php');
             
             <div class="services-cards service-card protocolo" data-service-name="Renovar Protocolo de Refugio">
                 <div class="cards-info">
-                    <h1>Renovar Protocolo de Refugio</h1>
+                    <h1>Renovar Protocolo de Refúgio</h1>
                     <p>"Te brindamos tranquilidad legal en Brasil. Nos encargamos proactivamente de la renovación anual de tu Protocolo de Refugio y tu RNM, eliminando el riesgo de caer en la irregularidad y asegurando la continuidad de todos tus derechos en el país."</p>
                 </div>
             </div>
