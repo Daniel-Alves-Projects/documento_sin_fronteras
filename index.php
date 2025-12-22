@@ -169,7 +169,7 @@ include('includes/config.php');
         <address class="contact-text">
             <p>Correo Electrónico: <a href="mailto:atendimento@documentosinfronteras.com.br">atendimento@documentosinfronteras.com.br</a></p>
             
-            <p>Teléfono/Whatsapp: <a href="https://wa.me/49991888063">(49) 9 9188-8063</a></p>
+            <p>Teléfono/Whatsapp: <a href="https://wa.me/5549991888063?text=¡Hola!%20Me%20gustaría%20saber%20más%20sobre%20los%20servicios%20de%20inmigración">(49) 9 9188-8063</a></p>
         </address>
     </section>
     
